@@ -17,7 +17,6 @@ class Destini extends StatelessWidget {
 
 StoryBrain story = StoryBrain();
 
-
 class StoryPage extends StatefulWidget {
   _StoryPageState createState() => _StoryPageState();
 }
@@ -42,8 +41,7 @@ class _StoryPageState extends State<StoryPage> {
                 child: Center(
                   child: Text(
                     //TODO: Step 10 - use the storyBrain to get the first story title and display it in this Text Widget.
-                    story.getStory();
-                    'Story text will go here.',
+                    story.getStory(),
                     style: TextStyle(
                       fontSize: 25.0,
                     ),
@@ -60,7 +58,7 @@ class _StoryPageState extends State<StoryPage> {
                   color: Colors.red,
                   child: Text(
                     //TODO: Step 13 - Use the storyBrain to get the text for choice 1.
-                    'Choice 1',
+                    story.getChoice1(),
                     style: TextStyle(
                       fontSize: 20.0,
                     ),
@@ -82,7 +80,7 @@ class _StoryPageState extends State<StoryPage> {
                   color: Colors.blue,
                   child: Text(
                     //TODO: Step 14 - Use the storyBrain to get the text for choice 2.
-                    'Choice 2',
+                    story.getChoice2(),
                     style: TextStyle(
                       fontSize: 20.0,
                     ),
